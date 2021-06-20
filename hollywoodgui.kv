@@ -1,0 +1,46 @@
+ScrollViewExample:
+
+<ScrollViewExample>:
+    BoxLayoutExample:
+
+<BoxLayoutExample>:
+    orientation: "vertical"
+    BoxLayout:
+        size_hint: 1, .20
+
+        Label:
+            size_hint: None, 1
+            width: "150dp"
+            text: "Enter a movie name: "
+            size_hint: .25, 1
+
+        TextInput:
+            id: movie_search
+            focus: True
+            multiline: False
+            size_hint: .50, 1
+
+        Button:
+            text: "Search"
+            on_press: root.on_button_click()
+            size_hint: .25, 1
+
+    TextInput:
+        text: root.my_text
+
+    BoxLayout:
+        size_hint: 1, .20
+        orientation: "horizontal"
+        Label:
+            text: "Enter movie no. from above: "
+        TextInput:
+            id: movie_inter_search
+            focus: True
+            text: root.inter_select
+            multiline: False
+        Button:
+            text: "Search"
+            on_press: root.on_button_inter_click()
+
+    TextInput:
+        text: root.final_result
